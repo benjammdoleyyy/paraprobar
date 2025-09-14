@@ -6,13 +6,6 @@ from portafolio.styles.styles import Size
 
 def footer(data: Media) -> rx.Component:
     return rx.vstack(
-        rx.text(
-            "© 2025 Neisser.tech - Todos los derechos reservados",
-            text_align="center",
-            font_size="sm",
-            color="gray",
-            margin_bottom=Size.SMALL.value
-        ),
         rx.hstack(
             icon_button(
                 "message-circle",
@@ -23,8 +16,14 @@ def footer(data: Media) -> rx.Component:
             spacing=Size.SMALL.value,
             justify="center"
         ),
+        rx.text(
+            "© 2025 Neisser.tech - Todos los derechos reservados",
+            text_align="center",
+            font_size="sm",
+            color="gray",
+            margin_top=Size.SMALL.value
+        ),
         spacing=Size.SMALL.value,
         align="center",
         width="100%"
     )
-
